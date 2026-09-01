@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BooleanLab — demonstração prática de lógica booleana em um sistema de login.">
+  <meta name="theme-color" content="#7a263a"><title>Portal Tricolor — Login booleano</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
+</head>
+<body><main>
+  <section class="login-screen" id="loginScreen">
+    <div class="login-intro"><div class="tricolor-line" aria-hidden="true"><i></i><i></i><i></i></div><a class="brand club-brand" href="#"><img src="assets/escudo-fluminense.png" alt="Escudo do Fluminense"><strong>Portal Tricolor</strong><small>PROJETO ACADÊMICO</small></a>
+      <div class="intro-copy"><div class="club-identity"><img src="assets/escudo-fluminense.png" alt=""><div><p class="overline">FLUMINENSE · LÓGICA BOOLEANA</p><h1>Paixão que une.<br>Lógica que decide.</h1></div></div><p>Uma experiência de login inspirada no Tricolor, criada para demonstrar como valores booleanos controlam decisões na programação.</p></div>
+      <div class="preview-heading"><span id="previewScenario">CENÁRIO INICIAL · CAMPOS VAZIOS</span><small>ATUALIZAÇÃO EM TEMPO REAL</small></div>
+      <div class="logic-preview" id="logicPreview" aria-live="polite"><div><span>USUÁRIO</span><strong id="previewUser">false</strong></div><b>&&</b><div><span>SENHA</span><strong id="previewPassword">false</strong></div><i>→</i><div class="preview-result"><span>ACESSO</span><strong id="previewAccess">false</strong></div></div>
+      <div class="club-note"><span class="mini-tricolor"><i></i><i></i><i></i></span><p>INSPIRAÇÃO TRICOLOR · GRENÁ, VERDE E BRANCO</p></div><p class="university">Universidade São Judas Tadeu · Unidade Santana</p>
+    </div>
+    <div class="login-area"><div class="login-card"><div class="mobile-brand brand club-brand"><img src="assets/escudo-fluminense.png" alt="Escudo do Fluminense"><strong>Portal Tricolor</strong></div>
+      <div class="card-heading"><p>ACESSO TRICOLOR</p><h2>Entre no Portal</h2><span>Use os dados de demonstração indicados abaixo.</span></div>
+      <form id="loginForm" novalidate>
+        <label for="email">E-mail</label><div class="field"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg><input type="email" id="email" autocomplete="username" placeholder="seu@email.com" required><span class="field-status" id="emailStatus"></span></div>
+        <div class="label-row"><label for="password">Senha</label><button type="button" id="forgotButton">Esqueceu a senha?</button></div>
+        <div class="field"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2M5 10h14v10H5z"/></svg><input type="password" id="password" autocomplete="current-password" placeholder="Digite sua senha" required><button class="show-password" type="button" id="showPassword" aria-label="Mostrar senha"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s4-6 10-6 10 6 10 6-4 6-10 6S2 12 2 12z"/><circle cx="12" cy="12" r="2.5"/></svg></button></div>
+        <p class="form-error" id="formError" role="alert"></p><button class="login-button" type="submit"><span>Entrar</span><i>→</i></button>
+      </form>
+      <div class="demo-access"><span>ESCOLHA UM CENÁRIO PARA DEMONSTRAR</span><div class="demo-grid"><button type="button" id="fillDemo"><b><span class="demo-dot correct"></span>Acesso correto</b><small>true && true = true</small><i>Testar</i></button><button type="button" id="fillWrong"><b><span class="demo-dot wrong"></span>Acesso incorreto</b><small>true && false = false</small><i>Testar</i></button></div></div>
+      <p class="privacy"><span>✓</span> Ambiente local. Nenhum dado é enviado ou armazenado.</p>
+    </div></div>
+  </section>
+
+  <section class="lesson-screen" id="lessonScreen" hidden>
+    <header class="lesson-header"><a class="brand club-brand compact" href="#"><img src="assets/escudo-fluminense.png" alt="Escudo do Fluminense"><strong>Portal Tricolor</strong></a><div><span class="logged-dot"></span><p>Autenticado como <strong>aluno</strong></p><button id="logoutButton">Sair</button></div></header>
+    <div class="lesson-hero"><p class="overline">LOGIN CONCLUÍDO · RESULTADO: TRUE</p><h1>Você acabou de usar<br><em>lógica booleana.</em></h1><p>O acesso foi liberado porque duas verificações retornaram verdadeiro ao mesmo tempo. Abaixo está o processo real executado pelo navegador.</p><a href="#como-funciona">Entender o processo <span>↓</span></a></div>
+    <section class="explanation" id="como-funciona"><div class="section-title"><span>01</span><div><p>O RACIOCÍNIO</p><h2>Como a decisão foi tomada</h2></div></div>
+      <div class="decision-flow"><article><span class="step">1</span><p>Primeira comparação</p><h3>O e-mail está correto?</h3><code>usuarioCorreto = true</code><strong class="true">TRUE</strong></article><div class="connector"><span>&&</span><small>OPERADOR AND</small></div><article><span class="step">2</span><p>Segunda comparação</p><h3>A senha está correta?</h3><code>senhaCorreta = true</code><strong class="true">TRUE</strong></article><div class="connector arrow">→</div><article class="final-decision"><span class="step">3</span><p>Resultado final</p><h3>As duas são verdadeiras?</h3><code>true && true</code><strong class="true">ACESSO LIBERADO</strong></article></div>
+      <aside class="and-note"><b>Por que AND?</b><p>O operador <code>&&</code> só retorna <code>true</code> quando todas as condições são verdadeiras. Se o e-mail ou a senha estiver incorreto, o resultado será <code>false</code> e o acesso será negado.</p></aside>
+    </section>
+    <section class="code-section"><div class="section-title"><span>02</span><div><p>O CÓDIGO REAL</p><h2>A função usada neste login</h2></div></div>
+      <div class="code-layout"><figure class="code-shot"><img src="assets/codigo-login.png" alt="Captura do código JavaScript real usado para validar o login"><figcaption>Captura gerada a partir da função real presente no arquivo <code>script.js</code>.</figcaption></figure>
+        <div class="code-explanation"><article><span>01</span><div><h3>Comparação estrita</h3><p>O JavaScript compara o que foi digitado com os valores esperados usando <code>===</code>. Cada comparação produz <code>true</code> ou <code>false</code>.</p></div></article><article><span>02</span><div><h3>Operação booleana</h3><p>Em seguida, <code>usuarioCorreto && senhaCorreta</code> combina os dois resultados com o operador AND.</p></div></article><article><span>03</span><div><h3>Tomada de decisão</h3><p>O <code>if</code> usa o resultado final. Se for verdadeiro, esta página é aberta; se for falso, o formulário exibe um aviso.</p></div></article></div>
+      </div>
+    </section>
+    <section class="truth-section"><div class="section-title"><span>03</span><div><p>TODAS AS POSSIBILIDADES</p><h2>Tabela verdade do login</h2></div></div>
+      <div class="truth-card"><table><thead><tr><th>E-mail correto</th><th>Senha correta</th><th>Resultado com AND</th><th>Decisão</th></tr></thead><tbody><tr><td>FALSE · 0</td><td>FALSE · 0</td><td>FALSE · 0</td><td><span class="denied">Acesso negado</span></td></tr><tr><td>FALSE · 0</td><td class="true">TRUE · 1</td><td>FALSE · 0</td><td><span class="denied">Acesso negado</span></td></tr><tr><td class="true">TRUE · 1</td><td>FALSE · 0</td><td>FALSE · 0</td><td><span class="denied">Acesso negado</span></td></tr><tr class="success-row"><td class="true">TRUE · 1</td><td class="true">TRUE · 1</td><td class="true">TRUE · 1</td><td><span class="allowed">Acesso liberado</span></td></tr></tbody></table></div>
+    </section>
+    <footer><div class="brand club-brand compact"><img src="assets/escudo-fluminense.png" alt="Escudo do Fluminense"><strong>Portal Tricolor</strong></div><p>Demonstração acadêmica de lógica booleana</p><small>Universidade São Judas Tadeu · Santana · Projeto não oficial</small></footer>
+  </section>
+</main><div class="toast" id="toast" role="status" aria-live="polite"></div><script src="script.js"></script></body></html>
