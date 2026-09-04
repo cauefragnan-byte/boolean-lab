@@ -2,21 +2,21 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="BooleanLab — demonstração prática de lógica booleana em um sistema de login.">
-  <meta name="theme-color" content="#7a263a"><title>Portal Tricolor — Login booleano</title>
+  <meta name="description" content="A3 Álgebra Booleana — demonstração prática de lógica booleana em um sistema de login.">
+  <meta name="theme-color" content="#171b33"><title>A3 Álgebra Booleana — Login</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
 </head>
 <body><main>
   <section class="login-screen" id="loginScreen">
-    <div class="login-intro"><div class="tricolor-line" aria-hidden="true"><i></i><i></i><i></i></div><a class="brand club-brand" href="#"><img src="assets/escudo-fluminense.png" alt="Escudo do Fluminense"><strong>Portal Tricolor</strong><small>PROJETO ACADÊMICO</small></a>
-      <div class="intro-copy"><div class="club-identity"><img src="assets/escudo-fluminense.png" alt=""><div><p class="overline">FLUMINENSE · LÓGICA BOOLEANA</p><h1>Paixão que une.<br>Lógica que decide.</h1></div></div><p>Uma experiência de login inspirada no Tricolor, criada para demonstrar como valores booleanos controlam decisões na programação.</p></div>
+    <div class="login-intro"><a class="brand" href="#"><span>A3</span> A3 Álgebra Booleana</a>
+      <div class="intro-copy"><p class="overline">ESTUDO DE CASO · LÓGICA BOOLEANA</p><h1>Uma decisão simples.<br>Dois resultados possíveis.</h1><p>Este sistema transforma uma tela de login comum em uma demonstração prática de como valores booleanos controlam decisões na programação.</p></div>
       <div class="preview-heading"><span id="previewScenario">CENÁRIO INICIAL · CAMPOS VAZIOS</span><small>ATUALIZAÇÃO EM TEMPO REAL</small></div>
       <div class="logic-preview" id="logicPreview" aria-live="polite"><div><span>USUÁRIO</span><strong id="previewUser">false</strong></div><b>&&</b><div><span>SENHA</span><strong id="previewPassword">false</strong></div><i>→</i><div class="preview-result"><span>ACESSO</span><strong id="previewAccess">false</strong></div></div>
-      <div class="club-note"><span class="mini-tricolor"><i></i><i></i><i></i></span><p>INSPIRAÇÃO TRICOLOR · GRENÁ, VERDE E BRANCO</p></div><p class="university">Universidade São Judas Tadeu · Unidade Santana</p>
+      <p class="university">Universidade São Judas Tadeu · Unidade Santana</p>
     </div>
-    <div class="login-area"><div class="login-card"><div class="mobile-brand brand club-brand"><img src="assets/escudo-fluminense.png" alt="Escudo do Fluminense"><strong>Portal Tricolor</strong></div>
-      <div class="card-heading"><p>ACESSO TRICOLOR</p><h2>Entre no Portal</h2><span>Use os dados de demonstração indicados abaixo.</span></div>
+    <div class="login-area"><div class="login-card"><div class="mobile-brand brand"><span>A3</span> A3 Álgebra Booleana</div>
+      <div class="card-heading"><p>ÁREA DE DEMONSTRAÇÃO</p><h2>Entre na sua conta</h2><span>Use os dados de demonstração indicados abaixo.</span></div>
       <form id="loginForm" novalidate>
         <label for="email">E-mail</label><div class="field"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg><input type="email" id="email" autocomplete="username" placeholder="seu@email.com" required><span class="field-status" id="emailStatus"></span></div>
         <div class="label-row"><label for="password">Senha</label><button type="button" id="forgotButton">Esqueceu a senha?</button></div>
@@ -29,7 +29,7 @@
   </section>
 
   <section class="lesson-screen" id="lessonScreen" hidden>
-    <header class="lesson-header"><a class="brand club-brand compact" href="#"><img src="assets/escudo-fluminense.png" alt="Escudo do Fluminense"><strong>Portal Tricolor</strong></a><div><span class="logged-dot"></span><p>Autenticado como <strong>aluno</strong></p><button id="logoutButton">Sair</button></div></header>
+    <header class="lesson-header"><a class="brand" href="#"><span>A3</span> A3 Álgebra Booleana</a><div><span class="logged-dot"></span><p>Autenticado como <strong>aluno</strong></p><button id="logoutButton">Sair</button></div></header>
     <div class="lesson-hero"><p class="overline">LOGIN CONCLUÍDO · RESULTADO: TRUE</p><h1>Você acabou de usar<br><em>lógica booleana.</em></h1><p>O acesso foi liberado porque duas verificações retornaram verdadeiro ao mesmo tempo. Abaixo está o processo real executado pelo navegador.</p><a href="#como-funciona">Entender o processo <span>↓</span></a></div>
     <section class="explanation" id="como-funciona"><div class="section-title"><span>01</span><div><p>O RACIOCÍNIO</p><h2>Como a decisão foi tomada</h2></div></div>
       <div class="decision-flow"><article><span class="step">1</span><p>Primeira comparação</p><h3>O e-mail está correto?</h3><code>usuarioCorreto = true</code><strong class="true">TRUE</strong></article><div class="connector"><span>&&</span><small>OPERADOR AND</small></div><article><span class="step">2</span><p>Segunda comparação</p><h3>A senha está correta?</h3><code>senhaCorreta = true</code><strong class="true">TRUE</strong></article><div class="connector arrow">→</div><article class="final-decision"><span class="step">3</span><p>Resultado final</p><h3>As duas são verdadeiras?</h3><code>true && true</code><strong class="true">ACESSO LIBERADO</strong></article></div>
@@ -43,6 +43,6 @@
     <section class="truth-section"><div class="section-title"><span>03</span><div><p>TODAS AS POSSIBILIDADES</p><h2>Tabela verdade do login</h2></div></div>
       <div class="truth-card"><table><thead><tr><th>E-mail correto</th><th>Senha correta</th><th>Resultado com AND</th><th>Decisão</th></tr></thead><tbody><tr><td>FALSE · 0</td><td>FALSE · 0</td><td>FALSE · 0</td><td><span class="denied">Acesso negado</span></td></tr><tr><td>FALSE · 0</td><td class="true">TRUE · 1</td><td>FALSE · 0</td><td><span class="denied">Acesso negado</span></td></tr><tr><td class="true">TRUE · 1</td><td>FALSE · 0</td><td>FALSE · 0</td><td><span class="denied">Acesso negado</span></td></tr><tr class="success-row"><td class="true">TRUE · 1</td><td class="true">TRUE · 1</td><td class="true">TRUE · 1</td><td><span class="allowed">Acesso liberado</span></td></tr></tbody></table></div>
     </section>
-    <footer><div class="brand club-brand compact"><img src="assets/escudo-fluminense.png" alt="Escudo do Fluminense"><strong>Portal Tricolor</strong></div><p>Demonstração acadêmica de lógica booleana</p><small>Universidade São Judas Tadeu · Santana · Projeto não oficial</small></footer>
+    <footer><div class="brand"><span>A3</span> A3 Álgebra Booleana</div><p>Demonstração acadêmica de lógica booleana</p><small>Universidade São Judas Tadeu · Santana</small></footer>
   </section>
 </main><div class="toast" id="toast" role="status" aria-live="polite"></div><script src="script.js"></script></body></html>

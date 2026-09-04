@@ -34,13 +34,13 @@ function updateBooleanPreview() {
 function showLesson() {
   loginScreen.hidden = true; lessonScreen.hidden = false;
   window.scrollTo({ top: 0, behavior: 'instant' });
-  document.title = 'Portal Tricolor — Como o login funciona';
+  document.title = 'A3 Álgebra Booleana — Como o login funciona';
 }
 
 function showLogin() {
   lessonScreen.hidden = true; loginScreen.hidden = false; loginForm.reset();
   formError.textContent = ''; updateBooleanPreview();
-  document.title = 'Portal Tricolor — Login booleano'; emailInput.focus();
+  document.title = 'A3 Álgebra Booleana — Login'; emailInput.focus();
 }
 
 function showToast(message) {

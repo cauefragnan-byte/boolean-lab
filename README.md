@@ -1,6 +1,6 @@
-# Portal Tricolor — Sistema de Login Booleano
+# A3 Álgebra Booleana — Sistema de Login
 
-Projeto universitário não oficial, inspirado na identidade visual do Fluminense, que demonstra lógica booleana por meio de um sistema de login funcional. Após a autenticação, o usuário encontra uma explicação visual do operador AND, a tabela verdade e uma captura do código JavaScript real utilizado.
+Projeto universitário que demonstra lógica booleana por meio de um sistema de login funcional. Após a autenticação, o usuário encontra uma explicação visual do operador AND, a tabela verdade e uma captura do código JavaScript real utilizado.
 
 ## Acesso para demonstração
 
@@ -9,7 +9,7 @@ Projeto universitário não oficial, inspirado na identidade visual do Fluminens
 
 O botão **Preencher** insere esses dados automaticamente.
 
-Também existe um cenário incorreto pronto para demonstrar como `true && false` produz `false` e impede o acesso. O visual utiliza discretamente a paleta tricolor — grená, verde e branco — como referência ao Fluminense.
+Também existe um cenário incorreto pronto para demonstrar como `true && false` produz `false` e impede o acesso.
 
 ## Como executar
 
