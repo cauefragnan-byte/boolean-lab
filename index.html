@@ -1,48 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A3 Álgebra Booleana — demonstração prática de lógica booleana em um sistema de login.">
-  <meta name="theme-color" content="#171b33"><title>A3 Álgebra Booleana — Login</title>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="STOCK IA — estoque inteligente com decisões baseadas em álgebra booleana.">
+  <title>STOCK IA — Estoque Inteligente</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body><main>
-  <section class="login-screen" id="loginScreen">
-    <div class="login-intro"><a class="brand" href="#"><span>A3</span> A3 Álgebra Booleana</a>
-      <div class="intro-copy"><p class="overline">ESTUDO DE CASO · LÓGICA BOOLEANA</p><h1>Uma decisão simples.<br>Dois resultados possíveis.</h1><p>Este sistema transforma uma tela de login comum em uma demonstração prática de como valores booleanos controlam decisões na programação.</p></div>
-      <div class="preview-heading"><span id="previewScenario">CENÁRIO INICIAL · CAMPOS VAZIOS</span><small>ATUALIZAÇÃO EM TEMPO REAL</small></div>
-      <div class="logic-preview" id="logicPreview" aria-live="polite"><div><span>USUÁRIO</span><strong id="previewUser">false</strong></div><b>&&</b><div><span>SENHA</span><strong id="previewPassword">false</strong></div><i>→</i><div class="preview-result"><span>ACESSO</span><strong id="previewAccess">false</strong></div></div>
-      <p class="university">Universidade São Judas Tadeu · Unidade Santana</p>
-    </div>
-    <div class="login-area"><div class="login-card"><div class="mobile-brand brand"><span>A3</span> A3 Álgebra Booleana</div>
-      <div class="card-heading"><p>ÁREA DE DEMONSTRAÇÃO</p><h2>Entre na sua conta</h2><span>Use os dados de demonstração indicados abaixo.</span></div>
-      <form id="loginForm" novalidate>
-        <label for="email">E-mail</label><div class="field"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg><input type="email" id="email" autocomplete="username" placeholder="seu@email.com" required><span class="field-status" id="emailStatus"></span></div>
-        <div class="label-row"><label for="password">Senha</label><button type="button" id="forgotButton">Esqueceu a senha?</button></div>
-        <div class="field"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2M5 10h14v10H5z"/></svg><input type="password" id="password" autocomplete="current-password" placeholder="Digite sua senha" required><button class="show-password" type="button" id="showPassword" aria-label="Mostrar senha"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s4-6 10-6 10 6 10 6-4 6-10 6S2 12 2 12z"/><circle cx="12" cy="12" r="2.5"/></svg></button></div>
-        <p class="form-error" id="formError" role="alert"></p><button class="login-button" type="submit"><span>Entrar</span><i>→</i></button>
-      </form>
-      <div class="demo-access"><span>ESCOLHA UM CENÁRIO PARA DEMONSTRAR</span><div class="demo-grid"><button type="button" id="fillDemo"><b><span class="demo-dot correct"></span>Acesso correto</b><small>true && true = true</small><i>Testar</i></button><button type="button" id="fillWrong"><b><span class="demo-dot wrong"></span>Acesso incorreto</b><small>true && false = false</small><i>Testar</i></button></div></div>
-      <p class="privacy"><span>✓</span> Ambiente local. Nenhum dado é enviado ou armazenado.</p>
-    </div></div>
-  </section>
-
-  <section class="lesson-screen" id="lessonScreen" hidden>
-    <header class="lesson-header"><a class="brand" href="#"><span>A3</span> A3 Álgebra Booleana</a><div><span class="logged-dot"></span><p>Autenticado como <strong>aluno</strong></p><button id="logoutButton">Sair</button></div></header>
-    <div class="lesson-hero"><p class="overline">LOGIN CONCLUÍDO · RESULTADO: TRUE</p><h1>Você acabou de usar<br><em>lógica booleana.</em></h1><p>O acesso foi liberado porque duas verificações retornaram verdadeiro ao mesmo tempo. Abaixo está o processo real executado pelo navegador.</p><a href="#como-funciona">Entender o processo <span>↓</span></a></div>
-    <section class="explanation" id="como-funciona"><div class="section-title"><span>01</span><div><p>O RACIOCÍNIO</p><h2>Como a decisão foi tomada</h2></div></div>
-      <div class="decision-flow"><article><span class="step">1</span><p>Primeira comparação</p><h3>O e-mail está correto?</h3><code>usuarioCorreto = true</code><strong class="true">TRUE</strong></article><div class="connector"><span>&&</span><small>OPERADOR AND</small></div><article><span class="step">2</span><p>Segunda comparação</p><h3>A senha está correta?</h3><code>senhaCorreta = true</code><strong class="true">TRUE</strong></article><div class="connector arrow">→</div><article class="final-decision"><span class="step">3</span><p>Resultado final</p><h3>As duas são verdadeiras?</h3><code>true && true</code><strong class="true">ACESSO LIBERADO</strong></article></div>
-      <aside class="and-note"><b>Por que AND?</b><p>O operador <code>&&</code> só retorna <code>true</code> quando todas as condições são verdadeiras. Se o e-mail ou a senha estiver incorreto, o resultado será <code>false</code> e o acesso será negado.</p></aside>
-    </section>
-    <section class="code-section"><div class="section-title"><span>02</span><div><p>O CÓDIGO REAL</p><h2>A função usada neste login</h2></div></div>
-      <div class="code-layout"><figure class="code-shot"><img src="assets/codigo-login.png" alt="Captura do código JavaScript real usado para validar o login"><figcaption>Captura gerada a partir da função real presente no arquivo <code>script.js</code>.</figcaption></figure>
-        <div class="code-explanation"><article><span>01</span><div><h3>Comparação estrita</h3><p>O JavaScript compara o que foi digitado com os valores esperados usando <code>===</code>. Cada comparação produz <code>true</code> ou <code>false</code>.</p></div></article><article><span>02</span><div><h3>Operação booleana</h3><p>Em seguida, <code>usuarioCorreto && senhaCorreta</code> combina os dois resultados com o operador AND.</p></div></article><article><span>03</span><div><h3>Tomada de decisão</h3><p>O <code>if</code> usa o resultado final. Se for verdadeiro, esta página é aberta; se for falso, o formulário exibe um aviso.</p></div></article></div>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><span class="brand-mark">S</span><div><strong>STOCK <em>IA</em></strong><small>ESTOQUE INTELIGENTE</small></div></div>
+      <button class="close-menu" id="closeMenu" aria-label="Fechar menu">×</button>
+      <nav class="nav" aria-label="Navegação principal">
+        <p>VISÃO GERAL</p><button class="nav-item active" data-view="dashboard"><span>⌂</span>Dashboard</button><button class="nav-item" data-view="products"><span>▦</span>Produtos</button><button class="nav-item" data-view="movements"><span>↕</span>Movimentações</button>
+        <p>INTELIGÊNCIA</p><button class="nav-item" data-view="alerts"><span>◉</span>Alertas <b class="nav-badge" id="navAlertCount">0</b></button><button class="nav-item" data-view="insights"><span>✦</span>Análise Inteligente</button>
+        <p>ÁLGEBRA BOOLEANA</p><button class="nav-item" data-view="rules"><span>∧</span>Regras Booleanas</button><button class="nav-item" data-view="simulator"><span>⌘</span>Simulador</button>
+        <p>GERENCIAMENTO</p><button class="nav-item" data-view="settings"><span>⚙</span>Configurações</button>
+      </nav>
+      <div class="sidebar-foot"><div class="user-avatar">CA</div><div><strong>Cauê</strong><small>Administrador</small></div><button id="quickTheme" title="Alternar modo Fluminense" aria-label="Alternar modo Fluminense">☼</button></div>
+    </aside>
+    <div class="scrim" id="scrim"></div>
+    <main class="main-content">
+      <header class="topbar"><button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button><div class="breadcrumbs"><span>STOCK IA</span><b>/</b><strong id="pageTitle">Dashboard</strong></div><div class="top-actions"><button class="icon-btn" id="headerTheme" title="Alternar modo Fluminense" aria-label="Alternar modo Fluminense">☼</button><button class="profile-chip"><span class="online-dot"></span> Cauê <small>⌄</small></button></div></header>
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+      <div class="view-container">
+        <section class="view active" id="view-dashboard"></section><section class="view" id="view-products"></section><section class="view" id="view-movements"></section><section class="view" id="view-alerts"></section><section class="view" id="view-insights"></section><section class="view" id="view-rules"></section><section class="view" id="view-simulator"></section><section class="view" id="view-settings"></section>
       </div>
+    </main>
+  </div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden><div class="modal" id="modal" role="dialog" aria-modal="true"></div></div>
+  <div class="ai-chat-backdrop" id="aiChatBackdrop" hidden>
+    <section class="ai-chat" role="dialog" aria-modal="true" aria-labelledby="aiChatTitle">
+      <header class="ai-chat-head"><div><span class="ai-kicker">STOCK IA · CENTRAL DE INTELIGÊNCIA</span><h2 id="aiChatTitle">Perguntar à IA</h2></div><button class="modal-close" data-action="close-ai-chat" aria-label="Fechar conversa">×</button></header>
+      <div class="ai-chat-messages" id="aiChatMessages"></div>
+      <div class="ai-suggestions" id="aiSuggestions"><button data-ai-question="O que pode faltar?">🔴 O que pode faltar?</button><button data-ai-question="O que está vendendo mais?">📈 O que está vendendo mais?</button><button data-ai-question="O que preciso repor?">📦 O que preciso repor?</button><button data-ai-question="Existem riscos no meu estoque?">⚠️ Existem riscos?</button><button data-ai-question="Tenho produtos parados?">💰 Tenho produtos parados?</button><button data-ai-question="Faça um resumo do estoque">📊 Resumo do estoque</button></div>
+      <form class="ai-chat-form" id="aiChatForm"><input id="aiQuestion" autocomplete="off" placeholder="O que você quer saber sobre seu estoque?" aria-label="Pergunta para a IA"><button class="btn primary" type="submit">Enviar</button></form>
+      <p class="ai-chat-note">A resposta usa os dados reais do estoque e pode usar a OpenAI quando o backend estiver configurado.</p>
     </section>
-    <section class="truth-section"><div class="section-title"><span>03</span><div><p>TODAS AS POSSIBILIDADES</p><h2>Tabela verdade do login</h2></div></div>
-      <div class="truth-card"><table><thead><tr><th>E-mail correto</th><th>Senha correta</th><th>Resultado com AND</th><th>Decisão</th></tr></thead><tbody><tr><td>FALSE · 0</td><td>FALSE · 0</td><td>FALSE · 0</td><td><span class="denied">Acesso negado</span></td></tr><tr><td>FALSE · 0</td><td class="true">TRUE · 1</td><td>FALSE · 0</td><td><span class="denied">Acesso negado</span></td></tr><tr><td class="true">TRUE · 1</td><td>FALSE · 0</td><td>FALSE · 0</td><td><span class="denied">Acesso negado</span></td></tr><tr class="success-row"><td class="true">TRUE · 1</td><td class="true">TRUE · 1</td><td class="true">TRUE · 1</td><td><span class="allowed">Acesso liberado</span></td></tr></tbody></table></div>
-    </section>
-    <footer><div class="brand"><span>A3</span> A3 Álgebra Booleana</div><p>Demonstração acadêmica de lógica booleana</p><small>Universidade São Judas Tadeu · Santana</small></footer>
-  </section>
-</main><div class="toast" id="toast" role="status" aria-live="polite"></div><script src="script.js"></script></body></html>
+  </div>
+  <script src="logic/booleanRules.js"></script><script src="data/demoData.js"></script><script src="services/storage.js"></script><script src="script.js"></script>
+</body></html>
