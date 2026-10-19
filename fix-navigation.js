@@ -1,6 +1,6 @@
 /* Mapa geográfico estilizado do Brasil e rotas até a sede em São Paulo. */
 const supplierPlaces={
- 'Distribuidora Sul':['São Paulo','SP',535,330], 'Águas Brasil':['Belo Horizonte','MG',560,275], 'Natural Foods':['Curitiba','PR',505,380], 'Café Paulista':['Campinas','SP',520,325], 'Grãos & Cia':['Goiânia','GO',480,235], 'Alimentos União':['Salvador','BA',695,195], 'Limpeza Total':['Rio de Janeiro','RJ',585,345], 'Higiene & Cia':['Recife','PE',700,105], 'Beleza Brasil':['Porto Alegre','RS',455,475], 'Tech Distribuição':['Brasília','DF',530,205], 'AudioMix':['Manaus','AM',330,95], 'Papelaria Central':['Ribeirão Preto','SP',515,300], 'Office Pro':['Florianópolis','SC',490,420]
+ 'Distribuidora Sul':['São Paulo','SP',535,330], 'Águas Brasil':['Belo Horizonte','MG',560,275], 'Natural Foods':['Curitiba','PR',505,380], 'Café Paulista':['Campinas','SP',520,325], 'Grãos & Cia':['Goiânia','GO',480,235], 'Alimentos União':['Salvador','BA',695,195], 'Limpeza Total':['Rio de Janeiro','RJ',585,345], 'Higiene & Cia':['Recife','PE',700,105], 'Beleza Brasil':['Porto Alegre','RS',455,475], 'Tech Distribuição':['Brasília','DF',530,205], 'AudioMix':['Manaus','AM',330,95], 'Papelaria Central':['Campo Grande','MS',470,350], 'Office Pro':['Florianópolis','SC',490,420]
 };
 const headquarters={city:'São Paulo',state:'SP',x:535,y:330};
 function routeInfo(place){const dx=(place[2]-headquarters.x)*8,dy=(place[3]-headquarters.y)*8,distance=Math.round(Math.sqrt(dx*dx+dy*dy));return {distance,hours:Math.max(.5,Math.round(distance/65*10)/10)}}
