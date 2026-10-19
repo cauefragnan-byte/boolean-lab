@@ -1,5 +1,5 @@
 const app = { data: StockStorage.load(), view:'dashboard', theme:StockStorage.theme(), filters:{search:'',category:'all',status:'all',stock:'all'}, simulator:{active:true,available:true,low:false,supplier:true} };
-const titles={dashboard:'Dashboard',products:'Produtos',movements:'Movimentações',alerts:'Alertas',insights:'Análise Inteligente',risk:'Análise de Risco',graph:'Mapa de Dependências',rules:'Regras Booleanas',graphRules:'Regras de Grafos',simulator:'Simulador',settings:'Configurações'};
+const titles={dashboard:'Dashboard',products:'Produtos',movements:'Movimentações',alerts:'Alertas',insights:'Análise Inteligente',risk:'Análise de Risco',graph:'Mapa de Dependências',rules:'Regras Booleanas',graphRules:'Regras de Grafos',probRules:'Regras de Probabilidade',simulator:'Simulador',settings:'Configurações'};
 const $=(s,c=document)=>c.querySelector(s); const $$=(s,c=document)=>[...c.querySelectorAll(s)];
 const esc=(v='')=>String(v).replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[x]));
 const product=id=>app.data.products.find(p=>p.id===Number(id));

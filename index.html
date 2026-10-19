@@ -16,7 +16,7 @@
       <nav class="nav" aria-label="Navegação principal">
         <p>VISÃO GERAL</p><button class="nav-item active" data-view="dashboard"><span>⌂</span>Dashboard</button><button class="nav-item" data-view="products"><span>▦</span>Produtos</button><button class="nav-item" data-view="movements"><span>↕</span>Movimentações</button>
         <p>INTELIGÊNCIA</p><button class="nav-item" data-view="alerts"><span>◉</span>Alertas <b class="nav-badge" id="navAlertCount">0</b></button><button class="nav-item" data-view="insights"><span>✦</span>Análise Inteligente</button><button class="nav-item" data-view="risk"><span>⌁</span>Análise de Risco</button><button class="nav-item" data-view="graph"><span>⌘</span>Mapa de Dependências</button>
-        <p>REGRAS MATEMÁTICAS</p><button class="nav-item" data-view="rules"><span>∧</span>Regras Booleanas</button><button class="nav-item" data-view="graphRules"><span>⌘</span>Regras de Grafos</button><button class="nav-item" data-view="simulator"><span>⌘</span>Simulador</button>
+        <p>REGRAS MATEMÁTICAS</p><button class="nav-item" data-view="rules"><span>∧</span>Regras Booleanas</button><button class="nav-item" data-view="graphRules"><span>⌘</span>Regras de Grafos</button><button class="nav-item" data-view="probRules"><span>∼</span>Regras de Probabilidade</button><button class="nav-item" data-view="simulator"><span>⌘</span>Simulador</button>
         <p>GERENCIAMENTO</p><button class="nav-item" data-view="settings"><span>⚙</span>Configurações</button>
       </nav>
       <div class="sidebar-foot"><div class="user-avatar">CA</div><div><strong>Cauê</strong><small>Administrador</small></div><button id="quickTheme" title="Alternar modo Fluminense" aria-label="Alternar modo Fluminense">☼</button></div>
@@ -26,7 +26,7 @@
       <header class="topbar"><button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button><div class="breadcrumbs"><span>STOCK IA</span><b>/</b><strong id="pageTitle">Dashboard</strong></div><div class="top-actions"><button class="icon-btn" id="headerTheme" title="Alternar modo Fluminense" aria-label="Alternar modo Fluminense">☼</button><button class="profile-chip"><span class="online-dot"></span> Cauê <small>⌄</small></button></div></header>
       <div id="toast" class="toast" role="status" aria-live="polite"></div>
       <div class="view-container">
-        <section class="view active" id="view-dashboard"></section><section class="view" id="view-products"></section><section class="view" id="view-movements"></section><section class="view" id="view-alerts"></section><section class="view" id="view-insights"></section><section class="view" id="view-risk"></section><section class="view" id="view-graph"></section><section class="view" id="view-rules"></section><section class="view" id="view-graphRules"></section><section class="view" id="view-simulator"></section><section class="view" id="view-settings"></section>
+        <section class="view active" id="view-dashboard"></section><section class="view" id="view-products"></section><section class="view" id="view-movements"></section><section class="view" id="view-alerts"></section><section class="view" id="view-insights"></section><section class="view" id="view-risk"></section><section class="view" id="view-graph"></section><section class="view" id="view-rules"></section><section class="view" id="view-graphRules"></section><section class="view" id="view-probRules"></section><section class="view" id="view-simulator"></section><section class="view" id="view-settings"></section>
       </div>
     </main>
   </div>
@@ -40,5 +40,5 @@
       <p class="ai-chat-note">A resposta usa os dados reais do estoque e pode usar a OpenAI quando o backend estiver configurado.</p>
     </section>
   </div>
-  <script src="logic/booleanRules.js"></script><script src="data/demoData.js"></script><script src="services/storage.js"></script><script src="script.js"></script><script src="fix-navigation.js"></script><script src="real-map.js"></script><script src="supplier-details.js"></script><script src="clean-map.js"></script><script src="math-rules.js"></script><script src="graph-rules-only.js"></script><script src="graph-rules-detail.js"></script><script src="map-zoom.js"></script>
+  <script src="logic/booleanRules.js"></script><script src="data/demoData.js"></script><script src="services/storage.js"></script><script src="script.js"></script><script src="fix-navigation.js"></script><script src="real-map.js"></script><script src="supplier-details.js"></script><script src="clean-map.js"></script><script src="math-rules.js"></script><script src="graph-rules-only.js"></script><script src="graph-rules-detail.js"></script><script src="probability-rules.js"></script><script src="risk-improved.js"></script><script src="map-zoom.js"></script>
 </body></html>
