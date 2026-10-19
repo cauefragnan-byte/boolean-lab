@@ -1,0 +1,10 @@
+/* Detalhamento simples de compras por fornecedor. Valores de imposto/logística são didáticos. */
+function renderGraphDetails(id){
+  const g=graphData(), isSupplier=id?.startsWith('s-'), supplier=isSupplier?g.suppliers[Number(id.slice(2))]:null;
+  const node=!isSupplier?g.nodes.find(n=>n.id===id):null, box=$('#graphDetails'); if(!box||(!supplier&&!node))return;
+  const name=supplier?.name||node?.label||'', place=supplierPlaces[name]||['São Paulo','SP',535,330], route=routeInfo(place);
+  const items=g.products.filter(p=>p.supplier===name), list=items.map(p=>{const qty=Math.max(0,Number(p.maxStock||p.minStock||0)-Number(p.stock||0)),subtotal=qty*Number(p.price||0);return {...p,qty,subtotal}});
+  const base=list.reduce((n,p)=>n+p.subtotal,0), taxRate=Math.min(18,Math.round((5+route.distance/1200)*10)/10), tax=base*taxRate/100, total=base+tax;
+  const connections=isSupplier?items.length:1;
+  box.innerHTML=`<span class="ai-section-kicker">${isSupplier?'FORNECEDOR':'PRODUTO'}</span><h3>${esc(name)}</h3><p>${isSupplier?`${place[0]} · ${place[1]}`:`SKU: ${esc(node.data.sku)} · Estoque: ${node.data.stock} un.`}</p><div class="route-card"><strong>${route.distance} km · ${route.hours} h</strong><span>tempo estimado da rota até a sede em São Paulo</span></div>${isSupplier?`<div class="supplier-order"><div class="supplier-order-head"><strong>Itens para pedir</strong><span>${list.length} produto(s)</span></div><div class="supplier-items">${list.length?list.map(p=>`<div class="supplier-item"><div><b>${esc(p.name)}</b><small>${p.qty?`${p.qty} un. sugeridas · ${money(p.price)} cada`:'Estoque dentro do limite'}</small></div><strong>${money(p.subtotal)}</strong></div>`).join(''):'<p class="supplier-empty">Nenhum item precisa de reposição agora.</p>'}</div><div class="supplier-costs"><span>Produtos <b>${money(base)}</b></span><span>Impostos e pedágios fictícios (${taxRate}%) <b>${money(tax)}</b></span><strong>Total estimado <b>${money(total)}</b></strong></div></div>`:`<div class="graph-connection-list"><b>Fornecedor responsável</b><span>${esc(name)}</span></div>`}`;
+}
